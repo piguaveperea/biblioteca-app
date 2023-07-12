@@ -5,4 +5,5 @@ from .models import Facultad, Tesis
 class TesisAdmin(admin.ModelAdmin):
     list_display=['titulo', 'autor', 'tutor']
 
+admin.site.register(Facultad)
 admin.site.register(Tesis)
