@@ -4,7 +4,7 @@ from . forms import LibroForm
 
 
 class  AdminLibro(admin.ModelAdmin):
-    list_display = ['numero', 'nombre_libro','isbn', 'codigo_barra', 'autor','categoria', 'area', 'campus', 'pais', 'editorial', 'portada']
+    list_display = ['numero', 'campus', 'area', 'n_clasificacion', 'cute', 'nombre_libro', 'categoria', 'autor', 'editorial', 'pais', 'fecha', 'codigo_barra', 'portada']
     list_editable = ['portada']
     form = LibroForm
     
