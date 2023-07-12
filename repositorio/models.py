@@ -6,6 +6,12 @@ class Facultad(models.Model):
     nombre = models.CharField(max_length=200)
     codigo = models.CharField(max_length=40, unique=True)
 
+    class Meta:
+        verbose_name = 'Facultad'
+        verbose_name_plural = 'Facultades'
+
+    def __str__(self):
+        return self.nombre 
 
 class Tesis(models.Model):
     campus = models.ForeignKey(Campus, to_field='codigo', on_delete=models.CASCADE)
@@ -19,4 +25,8 @@ class Tesis(models.Model):
     tutor = models.CharField(max_length=60)
     fecha =models.DateField()
     codigo_barra = models.CharField(max_length=200)
+
+    class Meta:
+        verbose_name = 'Tesi'
+        verbose_plural = 'Tesis'
 

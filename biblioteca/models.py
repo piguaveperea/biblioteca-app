@@ -9,6 +9,10 @@ class Campus(models.Model):
     codigo = models.CharField(max_length=10, unique=True)
     direccion = models.CharField(max_length=200, null=False)
 
+    class Meta:
+        verbose_name = 'campus',
+        verbose_name_plural ='campus'
+
     def __str__ (self):
         return self.nombre
 
