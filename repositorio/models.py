@@ -5,6 +5,7 @@ from biblioteca.models import Campus, Area
 class Facultad(models.Model):
     nombre = models.CharField(max_length=200)
     codigo = models.CharField(max_length=40, unique=True)
+    abreviatura = models.CharField(max_length=6, unique=True, null=False)
 
     class Meta:
         verbose_name = 'Facultad'
