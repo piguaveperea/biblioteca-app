@@ -1,11 +1,12 @@
 from django.contrib import admin
 from .models import Servicio, Registro_Servicio
 from rangefilter.filters import DateRangeFilterBuilder
+from import_export.admin import ImportExportModelAdmin
 # Register your models here.
 
 
-class AdminRegistroServicio(admin.ModelAdmin):
-    list_display = ['c_estudiante', 'campus', 'servicio', 'fecha']
+class AdminRegistroServicio(ImportExportModelAdmin, admin.ModelAdmin):
+    list_display = ['id','c_estudiante', 'campus', 'servicio', 'fecha']
     list_filter=[
         ('fecha', DateRangeFilterBuilder()),
     ]

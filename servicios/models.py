@@ -21,3 +21,4 @@ class Registro_Servicio(models.Model):
     class Meta:
         verbose_name = 'Registros de Servicios'
         verbose_name_plural = 'Registros de Servicios'
+        ordering = ['id']

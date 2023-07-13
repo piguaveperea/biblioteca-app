@@ -30,4 +30,5 @@ class Tesis(models.Model):
     class Meta:
         verbose_name = 'Tesi'
         verbose_name_plural = 'Tesis'
-
+        ordering = ['id']
+           

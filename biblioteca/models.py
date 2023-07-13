@@ -46,3 +46,6 @@ class Libro(models.Model):
     fecha = models.PositiveIntegerField(validators=[MaxValueValidator(datetime.now().year), MinValueValidator(1600)], help_text="El formato correcto es YYYY")
     portada = models.ImageField(null=True, editable=True)
 
+    class Meta:
+        ordering = ['id']
+
