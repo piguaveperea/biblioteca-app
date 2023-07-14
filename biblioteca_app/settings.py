@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-vp(ic3imm_!mb3sn9j_p16&ujsh_#yir-x+q+x-0wazs+_a8hp
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'rangefilter',
     'import_export',
+    'admin_soft.apps.AdminSoftDashboardConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -41,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'biblioteca',
     'repositorio',
-    'servicios'
+    'servicios',
 ]
 
 MIDDLEWARE = [
